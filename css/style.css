@@ -16,6 +16,15 @@ img.header{
     going to the bottom when the tab is too small. Not sure how to fix that since overflows don't work*/
 }
 
+header img.MainMenuIcon{
+    border: 4px solid white;
+    border-radius: 20%;
+    animation-name: navIMGanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
 footer{
     position: relative;
     clear: left;
@@ -48,6 +57,18 @@ nav img{
 
 }
 
+@keyframes navIMGanimation{
+    25% {border:4px solid white}
+    100% {border: 4px solid #eec668}
+}
+
+nav img.YouAreHere{
+    animation-name: navIMGanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
 section{
     overflow: auto;
     padding: 20px;
@@ -69,7 +90,12 @@ img.page1{
     margin: 30px; /*For the screenlayout image*/
 }
 
-
+img.page3{
+    float: left;
+    border: 4px solid white;
+    height: 25%;
+    margin: 20px; /*For the topping image*/
+}
 
 body{
     font-family: sans-serif;
@@ -78,7 +104,58 @@ body{
     font: Helvetica;
 }
 
-p, ul, ol{
+p, ul, ol, table{
     font-size: 18px;
                     /* for better readability*/
+}
+
+table, th, td {
+    border: 5px solid rgb(247, 241, 239);
+    border-collapse: collapse;
+    padding: 8px;
+  }
+
+#Socmed{
+    list-style: none;
+    position: relative;
+
+}
+
+#Socmed li, #Socmed a{
+    height: 69px;
+    width: 69px;
+    display: inline-block;
+}
+
+#Twitter{
+    left:0%;
+    width: 69px;
+    height: 69px;
+    background: url('../images/socmedicons.PNG') 0 0;
+}
+
+#Youtube{
+    left: 69px;
+    width: 69px;
+    height: 69px;
+    background: url('../images/socmedicons.PNG') -69px 0;
+}
+
+#Tiktok{
+    left: 138px;
+    width: 69px;
+    height: 69px;
+    background: url('../images/socmedicons.PNG') -138px 0;
+}
+
+#Twitter a:hover{
+    background: url('../images/socmedicons.PNG') 0 -69px;
+}
+
+#Youtube a:hover{
+    background: url('../images/socmedicons.PNG') -69px -69px;
+}
+
+#Tiktok a:hover{
+    background: url('../images/socmedicons.PNG') -138px -69px;
 }
